@@ -23,11 +23,7 @@
 				$scope.customers = data;
 			})
 			$scope.addCustomer = function(){
-				var getDatetime = function() {
-				  return (new Date);
-				};
-
-				var customer = {name: $scope.newCustomer.name, created_at: getDatetime()};
+				var customer = {name: $scope.newCustomer.name, created_at: new Date().toDateString()};
 				$scope.customers.push(customer);
 
 				$scope.newCustomer = {};
