@@ -41,7 +41,7 @@
 						<th>Placed On</th>
 					</thead>
 					<tbody>
-						<tr ng-repeat="order in Orders.orders">
+						<tr ng-repeat="order in Orders.orders | filter: filter_orders | orderBy: 'customer_name'">
 							<td>{{order.customer_name}}</td>
 							<td>{{order.product}}</td>
 							<td>{{order.quantity}}</td>
